@@ -85,17 +85,14 @@ text-decoration-line: none;
 
 
 
-.bottomcolor{
-    margin-top: 30px;
-    width: 250px;
+.fundo-amarelo{
     background-color: #ffd700
-    
 }
 
-.bottomfont{
-font-weight:600;
-
+.fundo-cinza{
+    background-color: #9e9ea1
 }
+
 
 
 .ml-1{
