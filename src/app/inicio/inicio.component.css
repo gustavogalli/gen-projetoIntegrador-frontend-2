@@ -32,10 +32,18 @@
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
+.fundo-preto:hover{
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
 .fundo-cinza-escuro:hover{
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .fundo-cinza-claro:hover{
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.fonte-preta{
+    color: black
 }
