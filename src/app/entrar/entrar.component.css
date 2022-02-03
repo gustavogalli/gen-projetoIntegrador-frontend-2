@@ -59,3 +59,11 @@ text-decoration-line: none;
 
   
 }
+
+
+.bottomright {
+    position: absolute;
+    bottom: 190px;
+    right: 50px;
+    font-size: 18px;
+}
