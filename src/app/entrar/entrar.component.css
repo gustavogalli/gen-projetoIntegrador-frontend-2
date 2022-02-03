@@ -93,6 +93,18 @@ text-decoration-line: none;
     background-color: #9e9ea1
 }
 
+.fundo-preto{
+    background-color: #0C0C0D
+}
+
+.btn-entrar:hover{
+    font-weight: bold;
+}
+
+.btn-cadastrar:hover{
+    font-weight: bold;
+}
+
 
 
 .ml-1{
