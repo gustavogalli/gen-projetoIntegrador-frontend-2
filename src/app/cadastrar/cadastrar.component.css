@@ -11,9 +11,17 @@
 .asterisco{
     color: red;
 }
-.font{
-    font-family: 'Poppins', sans-serif;
-    }
+
+h2{
+    font-family: 'Poppins', Bold 700 sans-serif;
+    font-size: 50px;
+}
+
+.font3{
+    font-family: 'Poppins', Bold 700 sans-serif;
+    font-size: 20px; 
+}
+
 .botao-cadastrar{
     background-color: #ffd700;    
     }
@@ -53,3 +61,24 @@
     border-radius: 5px;
 
   }
+
+
+  .fundo-amarelo{
+    background-color: #ffd700
+}
+
+.fundo-cinza{
+    background-color: #9e9ea1
+}
+
+.fundo-preto{
+    background-color: #0C0C0D
+}
+
+.btn-amarelo:hover{
+    font-weight: bold;
+}
+
+.btn-preto:hover{
+    font-weight: bold;
+}
