@@ -98,3 +98,42 @@ font-weight:600;
 }
 
 
+.ml-1{
+
+    margin-right: 90px;
+     
+
+    }
+
+
+.ml-2{
+
+    margin-right: 140px;
+    
+ }
+
+
+
+
+
+.navbackground {
+    background-color: #000000;
+}
+
+.mr-1{
+
+    margin-left: 50px;
+    margin-top: 15px;
+     
+
+    }
+
+    
+    
+
+    .logo{
+
+        justify-content: start !important;
+        align-items: flex-start;
+    
+        }
