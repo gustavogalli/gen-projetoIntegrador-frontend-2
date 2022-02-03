@@ -47,3 +47,11 @@
 .fonte-preta{
     color: black
 }
+
+.borda-arredondada{
+    border-radius: 23px;
+}
+
+.borda-sombreada{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
