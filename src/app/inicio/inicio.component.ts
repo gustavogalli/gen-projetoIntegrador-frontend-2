@@ -16,6 +16,12 @@ import { TemaService } from '../service/tema.service';
 })
 export class InicioComponent implements OnInit {
 
+
+
+  foto = environment.foto
+  nome = environment.nome
+
+
   postagem: Postagem = new Postagem
   listaPostagens: Postagem[]
   tituloPost: string
