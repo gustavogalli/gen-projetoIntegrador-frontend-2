@@ -14,24 +14,29 @@ export class PostagemService {
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
+
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://gen-ti.herokuapp.com/postagem', this.token)
+    return this.http.get<Postagem[]>('https://blogpessoalgustavogalli.herokuapp.com/postagens', this.token)
   }
 
   getByIdPostagem(id: number): Observable<Postagem>{
-    return this.http.get<Postagem>(`https://gen-ti.herokuapp.com/postagem/${id}`,this.token)
+    return this.http.get<Postagem>(`https://blogpessoalgustavogalli.herokuapp.com/postagens/${id}`, this.token)
+  }
+
+  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://blogpessoalgustavogalli.herokuapp.com/postagens/titulo/${titulo}`, this.token)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('https://gen-ti.herokuapp.com/postagem/save', postagem, this.token)
+    return this.http.post<Postagem>('https://blogpessoalgustavogalli.herokuapp.com/postagens', postagem, this.token)
   }
 
-  putPostagem(postagem: Postagem):Observable<Postagem>{
-    return this.http.put<Postagem>('https://gen-ti.herokuapp.com/postagem/update',postagem, this.token)
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://blogpessoalgustavogalli.herokuapp.com/postagens', postagem, this.token)
   }
 
   deletePostagem(id: number){
-    return this.http.delete<Postagem>(`https://gen-ti.herokuapp.com/postagem/remove/${id}`,this.token)
-
+    return this.http.delete(`https://blogpessoalgustavogalli.herokuapp.com/postagens/${id}`, this.token)
   }
+
 }

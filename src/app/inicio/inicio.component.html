@@ -51,14 +51,26 @@
 
     <div class="tab-content" id="myTabContent">
 
-        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab" data-toggle="tab">  
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
+
+            <!-- Pesquisar por título -->
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="titulo"
+                            placeholder="Pesquisar por título de postagem" [(ngModel)]='tituloPost'
+                            (keyup)="findByTituloPostagem()">
+                    </div>
+                </div>
+            </div>
+            <!-- /Pesquisar por título -->
+
 
             <!-- Todas as postagens -->
             <div class="container w-75">
-
                 <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
                     <!-- Card -->
-                    <div class="col mb-3" *ngFor='let item of listaPostagens'>
+                    <div class="col mb-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{item.titulo}}</h4>
@@ -73,20 +85,29 @@
                     </div>
                     <!-- /Card-->
                 </div>
-
             </div>
             <!-- /Todas as postagens -->
-
         </div>
 
-        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab" data-dismiss="modal">
+        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
+
+            <!-- Pesquisar por título -->
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="titulo"
+                            placeholder="Pesquisar por título de postagem" [(ngModel)]='tituloPost'
+                            (keyup)="findByTituloPostagem()">
+                    </div>
+                </div>
+            </div>
+            <!-- /Pesquisar por título -->
 
             <!-- Minhas postagens -->
             <div class="container w-75">
-
                 <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
                     <!-- Card -->
-                    <div class="col mb-3" *ngFor='let item of usuario.postagem'>
+                    <div class="col mb-3" *ngFor='let item of usuario.postagem | orderBy : key : reverse'>
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{item.titulo}}</h4>
@@ -96,10 +117,8 @@
                                     <small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
                                         'HH:mm' }}</small>
 
-                                    <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3"
-                                        href="">Editar</a>
-                                    <a [routerLink]="['/postagem-delete', item.id]" class="text-danger"
-                                        href="">Apagar</a>
+                                    <a [routerLink]="['/postagem-edit', item.id]" class="text-info mx-2">Editar</a>
+                                    <a [routerLink]="['/postagem-delete', item.id]" class="text-danger mx-2">Apagar</a>
 
                                 </div>
                             </div>
@@ -107,28 +126,32 @@
                     </div>
                     <!-- /Card-->
                 </div>
-
             </div>
             <!-- /Minhas postagens -->
-
-
-
-
         </div>
 
         <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="postagemTema-tab">
+
+            <!-- Pesquisar tema -->
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="titulo" placeholder="Pesquisar por tema"
+                            [(ngModel)]='nomeTema' (keyup)="findByNomeTema()">
+                    </div>
+                </div>
+            </div>
+            <!-- /Pesquisar tema -->
 
             <!-- Postagens por tema -->
             <div class="container w-75">
 
                 <div class="row row-cols-1 row-cols-md-2 g-4 mt-2" *ngFor='let tema of listaTemas'>
                     <!-- Card -->
-                    <div class="col mb-3" *ngFor='let item of tema.postagens'>
+                    <div class="col mb-3" *ngFor='let item of tema.postagens | orderBy : key : reverse'>
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{item.titulo}}</h4>
-
-
                                 <p class="card-text">{{item.texto}}</p>
                                 <div class="card-footer">
                                     <small class="text-muted">{{item.usuario.nome}}
@@ -139,19 +162,11 @@
                     </div>
                     <!-- /Card-->
                 </div>
-
             </div>
             <!-- /Postagens por tema -->
 
-
-
         </div>
-
     </div>
-
-
-
-
 
 
     <!-- Modal -->

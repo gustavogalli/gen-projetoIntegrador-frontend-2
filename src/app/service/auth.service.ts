@@ -15,19 +15,19 @@ export class AuthService {
   ) { }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{ //observable GARANTE o tipo que será passado
-    return this.http.post<UsuarioLogin>("https://gen-ti.herokuapp.com/usuarios/logar", usuarioLogin) // salva no caminho em questão o parâmetro passado (usuarioLogin)
+    return this.http.post<UsuarioLogin>("https://blogpessoalgustavogalli.herokuapp.com/usuarios/logar", usuarioLogin) // salva no caminho em questão o parâmetro passado (usuarioLogin)
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>("https://gen-ti.herokuapp.com/usuarios/cadastrar", usuario)
+    return this.http.post<Usuario>("https://blogpessoalgustavogalli.herokuapp.com/usuarios/cadastrar", usuario)
   }
 
-  atualizar(usuario :Usuario):Observable<Usuario>{
-    return this.http.put<Usuario>("https://gen-ti.herokuapp.com/usuarios/atualizar", usuario)
+  atualizar(usuario: Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>('https://blogpessoalgustavogalli.herokuapp.com/usuarios/atualizar',usuario)
   }
 
   getByIdUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`https://gen-ti.herokuapp.com/usuarios/${id}`)
+    return this.http.get<Usuario>(`https://blogpessoalgustavogalli.herokuapp.com/usuarios/${id}`)
   }
 
   logado(){
