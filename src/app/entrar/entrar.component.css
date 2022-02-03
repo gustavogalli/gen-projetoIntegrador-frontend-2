@@ -36,3 +36,26 @@ text-decoration-line: none;
     padding: 0;
 }
 
+.margem{
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+
+.margem{
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+
+
+.col-md-4{
+    background-color: white;
+    border-radius: 35px;
+    
+    width:  319px;
+    height: 493px;
+  
+
+  
+}
