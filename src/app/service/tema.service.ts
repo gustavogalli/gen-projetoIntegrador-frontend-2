@@ -16,27 +16,27 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('https://blogpessoalgustavogalli.herokuapp.com/tema', this.token)
+    return this.http.get<Tema[]>('https://gen-ti.herokuapp.com/tema', this.token)
   }
 
   getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://blogpessoalgustavogalli.herokuapp.com/tema/${id}`, this.token)
+    return this.http.get<Tema>(`https://gen-ti.herokuapp.com/tema/${id}`, this.token)
   }
 
   getByNomeTema(nome: string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://blogpessoalgustavogalli.herokuapp.com/tema/descricao/${nome}`, this.token)
+    return this.http.get<Tema[]>(`https://gen-ti.herokuapp.com/tema/${nome}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://blogpessoalgustavogalli.herokuapp.com/tema', tema, this.token)
+    return this.http.post<Tema>('https://gen-ti.herokuapp.com/tema', tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://blogpessoalgustavogalli.herokuapp.com/tema', tema, this.token)
+    return this.http.put<Tema>('https://gen-ti.herokuapp.com/tema', tema, this.token)
   }
 
   deleteTema(id: number){ // não precisa de Observable pq não tá passando um objeto, só um id
-    return this.http.delete(`https://blogpessoalgustavogalli.herokuapp.com/tema/${id}`, this.token)
+    return this.http.delete(`https://gen-ti.herokuapp.com/tema/${id}`, this.token)
   }
 
 }
