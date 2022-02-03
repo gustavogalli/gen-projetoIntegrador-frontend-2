@@ -67,3 +67,19 @@ text-decoration-line: none;
     right: 50px;
     font-size: 18px;
 }
+
+
+.font{
+    font-family: 'Poppins', Bold 700 sans-serif;
+    font-size: 50px;
+    margin-bottom: 40px;
+
+    }
+
+    .font3{
+        font-family: 'Poppins', Bold 700 sans-serif;
+        font-size: 20px;
+     
+}
+
+
