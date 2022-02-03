@@ -1,32 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center fs-16">
-                <li class="nav-item">
-                    <img src="{{foto}}" alt="Imagem do usuário"
-                        width="50px" height="50px" class="img-fluid rounded-circle">
-                </li>
-                <li class="nav-item">
-                    <p class="m-0 fw-bold text-white ps-3">{{nome}}</p>
-                </li>
+<nav class="navbar navbar-expand-lg navbar-light navbackground">
 
-                <li>
-                    <a [routerLink]="['/usuario-edit', id]">
-                        <i class="fa fa-pencil-square-o m-0 text-white ps-3" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex align-items-center">
-                <li class="nav-item pl-3">
-                    <a (click)='sair()' class="m-0 font-weight-bold fs-14 text-light">Sair<i class="ps-2 fa fa-sign-out" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-
-        </div>
+    <img src="../../assets/img/Gen.TI.png" height="200px" width="200px" alt="">
+    <a class="navbar-brand" href="#"></a>
+  
+    <div class="collapse navbar-collapse justify-content-end mr-1" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-2 ">
+        <li class="nav-item ">
+          <a class="nav-link text-white font3 sublinhado-gradiente " href="#">Home <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font3 sublinhado-gradiente " href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font3 sublinhado-gradiente " routerLink="/cadastrar">Cadastro</a>
+        </li>
+  
+      </ul>
     </div>
-</nav>
+  </nav>
