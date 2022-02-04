@@ -26,7 +26,14 @@
                             data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova postagem</button>
 
                         <button class="btn fundo-preto text-white w-100 my-2">Minhas Postagens</button>
-                        <button class="btn fundo-cinza-claro text-white w-100 my-2">Editar usuário</button>
+                        
+
+
+                        <button  class="btn fundo-cinza-claro text-white w-100 my-2"    
+                        [routerLink]="['/usuario-edit', id]"
+                        >Editar usuário
+                            
+                        </button>
                     </div>
 
                 </div>
@@ -88,8 +95,8 @@
                                 <div class="col mb-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                     <div class="card borda-arredondada borda-sombreada">
                                         <div class="card-body">
-                                          
-                                          <img src="{{item.usuario.foto}}" alt="" width="50px" height="50px">
+
+                                            <img src="{{item.usuario.foto}}" alt="" width="50px" height="50px">
 
                                             <h4 class="card-title">{{item.titulo}}</h4>
                                             <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
