@@ -1,13 +1,14 @@
 <div class="container-fluid">
-    <div class="row bg-secondary">
-        <div class="col-md-12 text-white">
+    <div class="row fundo-cinza text-white">
+
+        <div class="col-md-12">
             <a routerLink="/inicio" class="text-white text-start">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-                Início
+                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
             </a>
 
             <h1 class="fs-54 text-center">Temas</h1>
             <h5 class="fs-18 text-center">Veja aqui todos os temas cadastrados ou cadastre um novo</h5>
+            
         </div>
 
         <div class="row d-flex justify-content-center my-4">
@@ -15,28 +16,28 @@
                 <div class="form-group">
                     <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
                 </div>
-
-                <div class="d-flex justify-content-center">
-                    <button class="btn btn-light mt-4" (click)='cadastrar()'>Cadastrar</button>
-                </div>
-
             </div>
+            <div class="col-md-1">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-light" (click)='cadastrar()'>Cadastrar</button>
+                </div>
+            </div>
+
         </div>
 
     </div>
 </div>
 
 
-<div class="container">
-    <div class="row mt-5">
+<div class="container-fluid">
+    <div class="row py-5">
         <div class="col-md-12">
             <h2 class="text-center">Todos os temas</h2>
         </div>
     </div>
 
-    <div class="row my-4 d-flex justify-content-center">
+    <div class="row d-flex justify-content-center">
         <div class="col-md-6">
-
 
             <table class="table table-hover">
                 <thead>
@@ -52,8 +53,8 @@
                     <th>{{item.id}}</th>
                     <td>{{item.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                      <button class="btn btn-warning m-2" [routerLink]="['/tema-edit', item.id]">Editar</button>
-                      <button class="btn btn-danger m-2" [routerLink]="['/tema-delete', item.id]">Apagar</button>
+                      <button class="btn btn-cinza m-2" [routerLink]="['/tema-edit', item.id]">Editar</button>
+                      <button class="btn btn-amarelo m-2" [routerLink]="['/tema-delete', item.id]">Apagar</button>
                     </td>
                   </tr>
                 </tbody>
