@@ -21,6 +21,20 @@
     color: white;
 }
 
+.btn-cinza{
+    font-weight: bold;
+    background-color: #1F1F22;
+    color: white;
+}
+
+.fundo-amarelo:hover {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.fundo-preto:hover {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
 .borda-arredondada {
     border-radius: 23px;
 }
