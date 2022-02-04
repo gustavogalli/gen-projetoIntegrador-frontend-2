@@ -88,6 +88,9 @@
                                 <div class="col mb-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                     <div class="card borda-arredondada borda-sombreada">
                                         <div class="card-body">
+                                          
+                                          <img src="{{item.usuario.foto}}" alt="" width="50px" height="50px">
+
                                             <h4 class="card-title">{{item.titulo}}</h4>
                                             <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
                                             <p class="card-text">{{item.texto}}</p>
@@ -127,7 +130,10 @@
                                 <div class="col mb-3" *ngFor='let item of usuario.postagem | orderBy : key : reverse'>
                                     <div class="card borda-arredondada borda-sombreada">
                                         <div class="card-body">
-                                            <h4 class="card-title">{{item.titulo}}</h4>
+                                        
+                                        <img src="{{item.usuario.foto}}" alt="" >
+                                         
+                                        <h4 class="card-title">{{item.titulo}}</h4>
                                             <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
                                             <p class="card-text">{{item.texto}}</p>
                                             <div class="card-footer">
