@@ -82,16 +82,16 @@ h2{
 
 
 
-.fundo-amarelo{
+
+.btn-amarelo {
+    font-weight: bold;
     background-color: #ffd700
 }
 
-.fundo-cinza{
-    background-color: #9e9ea1
-}
-
-.fundo-preto{
-    background-color: #0C0C0D
+.btn-preto {
+    font-weight: bold;
+    background-color: #0C0C0D;
+    color: white;
 }
 
 .btn-amarelo:hover {
