@@ -21,6 +21,14 @@
     color: white;
 }
 
+.btn-amarelo:hover {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-preto:hover {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
 .btn-cinza{
     font-weight: bold;
     background-color: #1F1F22;
