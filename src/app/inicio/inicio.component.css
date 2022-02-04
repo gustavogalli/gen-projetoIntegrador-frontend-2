@@ -22,7 +22,8 @@
 
 .btn-amarelo {
     font-weight: bold;
-    background-color: #ffd700
+    background-color: #ffd700;
+    color: black
 }
 
 .btn-preto {
@@ -59,6 +60,9 @@
 
 .fonte-preta {
     color: black
+}
+.fonte-amarela {
+    color: #ffd700
 }
 
 .borda-arredondada {
