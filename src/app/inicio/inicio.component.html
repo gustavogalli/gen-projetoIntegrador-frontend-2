@@ -26,13 +26,12 @@
                             data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova postagem</button>
 
                         <button class="btn fundo-preto text-white w-100 my-2">Minhas Postagens</button>
-                        
 
 
-                        <button  class="btn fundo-cinza-claro text-white w-100 my-2"    
-                        [routerLink]="['/usuario-edit', id]"
-                        >Editar usuário
-                            
+
+                        <button class="btn fundo-cinza-claro text-white w-100 my-2"
+                            [routerLink]="['/usuario-edit', id]">Editar usuário
+
                         </button>
                     </div>
 
@@ -95,16 +94,24 @@
                                 <div class="col mb-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                     <div class="card borda-arredondada borda-sombreada">
                                         <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3 d-flex flex-column align-items-center text-center">
 
-                                            <img src="{{item.usuario.foto}}" alt="" width="50px" height="50px">
+                                                    <img src="{{item.usuario.foto}}" alt="" width="75px" height="75px" class="mt-3">
+                                                    <small class="text-muted mt-2"><strong>{{item.usuario.nome}}</strong></small>
+                                                    <small class="text-muted mt-2">{{item.data | date:'HH:mm'}}</small>
+                                                    <small class="text-muted mb-5">{{item.data | date: 'dd/MM/yy'}}</small>
 
-                                            <h4 class="card-title">{{item.titulo}}</h4>
-                                            <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
-                                            <p class="card-text">{{item.texto}}</p>
-                                            <div class="card-footer">
-                                                <small class="text-muted">{{item.usuario.nome}}
-                                                    - {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'
-                                                    }}</small>
+                                                </div>
+
+                                                <div class="col-md-9">
+                                                    <h4 class="card-title">{{item.titulo}}</h4>
+                                                    <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
+                                                    <p class="card-text">{{item.texto}}</p>
+                                                </div>
+
+
+
                                             </div>
                                         </div>
                                     </div>
