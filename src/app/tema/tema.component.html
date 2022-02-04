@@ -1,7 +1,7 @@
 <div class="container-fluid">
-    <div class="row bg-secondary">
-        <div class="col-md-12 text-white">
-            <a routerLink="/inicio" class="text-white text-start">
+    <div class="row fundo-cinza fonte-cinza-claro">
+        <div class="col-md-12">
+            <a routerLink="/inicio" class="fonte-cinza-claro text-start">
                 <i class="fa fa-angle-double-left" aria-hidden="true"></i>
                 Início
             </a>
@@ -27,16 +27,15 @@
 </div>
 
 
-<div class="container">
-    <div class="row mt-5">
+<div class="container-fluid">
+    <div class="row py-5">
         <div class="col-md-12">
             <h2 class="text-center">Todos os temas</h2>
         </div>
     </div>
 
-    <div class="row my-4 d-flex justify-content-center">
+    <div class="row d-flex justify-content-center">
         <div class="col-md-6">
-
 
             <table class="table table-hover">
                 <thead>
@@ -52,8 +51,8 @@
                     <th>{{item.id}}</th>
                     <td>{{item.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                      <button class="btn btn-warning m-2" [routerLink]="['/tema-edit', item.id]">Editar</button>
-                      <button class="btn btn-danger m-2" [routerLink]="['/tema-delete', item.id]">Apagar</button>
+                      <button class="btn btn-preto m-2" [routerLink]="['/tema-edit', item.id]">Editar</button>
+                      <button class="btn btn-amarelo m-2" [routerLink]="['/tema-delete', item.id]">Apagar</button>
                     </td>
                   </tr>
                 </tbody>
