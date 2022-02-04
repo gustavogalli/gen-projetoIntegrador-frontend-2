@@ -80,7 +80,7 @@
                         <div class="row row-cols-1 row-cols-md-12 g-4 mt-2">
                             <!-- Card -->
                             <div class="col mb-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-                                <div class="card">
+                                <div class="card borda-arredondada borda-sombreada">
                                     <div class="card-body">
                                         <h4 class="card-title">{{item.titulo}}</h4>
                                         <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
@@ -117,7 +117,7 @@
                         <div class="row row-cols-1 row-cols-md-12 g-4 mt-2">
                             <!-- Card -->
                             <div class="col mb-3" *ngFor='let item of usuario.postagem | orderBy : key : reverse'>
-                                <div class="card">
+                                <div class="card borda-arredondada borda-sombreada">
                                     <div class="card-body">
                                         <h4 class="card-title">{{item.titulo}}</h4>
                                         <p class="fst-italic fw-lighter">Tema: {{item.tema.descricao}}</p>
@@ -158,7 +158,7 @@
                         <div class="row row-cols-1 row-cols-md-12 g-4 mt-2" *ngFor='let tema of listaTemas'>
                             <!-- Card -->
                             <div class="col mb-3" *ngFor='let item of tema.postagens | orderBy : key : reverse'>
-                                <div class="card">
+                                <div class="card borda-arredondada borda-sombreada">
                                     <div class="card-body">
                                         <h4 class="card-title">{{item.titulo}}</h4>
                                         <p class="card-text">{{item.texto}}</p>
