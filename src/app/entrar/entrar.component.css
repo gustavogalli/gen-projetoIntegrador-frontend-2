@@ -94,12 +94,12 @@ h2{
     background-color: #0C0C0D
 }
 
-.btn-amarelo:hover{
-    font-weight: bold;
+.btn-amarelo:hover {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
-.btn-preto:hover{
-    font-weight: bold;
+.btn-preto:hover {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 
