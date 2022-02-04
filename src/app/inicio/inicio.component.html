@@ -13,9 +13,11 @@
 
                     <!-- Card body-->
                     <div class="card-body d-flex flex-column  align-items-center">
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-2">
                             <h5 class="mb-4 text-center fonte-nome mr-5">{{nome}}</h5>
-                            <i class="fa fa-cog row d-flex mx-1" aria-hidden="true"></i>
+                            <a [routerLink]="['/usuario-edit', id]">
+                                <i class="fa fa-cog row d-flex mx-1" aria-hidden="true"></i>
+                            </a>
                         </div>
 
                         <button type="button" class="btn fundo-amarelo fonte-preto fw-bold w-100 my-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova postagem</button>

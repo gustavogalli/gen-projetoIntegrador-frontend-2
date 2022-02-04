@@ -20,6 +20,7 @@ export class InicioComponent implements OnInit {
 
   foto = environment.foto
   nome = environment.nome
+  id = environment.id
 
 
   postagem: Postagem = new Postagem
