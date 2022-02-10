@@ -21,18 +21,13 @@
                             <i class="fa fa-cog row d-flex mx-2 mb-4" aria-hidden="true"></i>
                         </a>
 
-
                         <button type="button" class="btn fundo-amarelo fonte-preto fw-bold w-100 my-2"
                             data-bs-toggle="modal" data-bs-target="#novaPostagem">Nova postagem</button>
 
-                        <a routerLink="/tema" data-bs-dismiss="modal" data-bs-target="#my-modal"><button
-                                class="btn fundo-preto text-white w-100 my-2"> Todos os temas </button>
-                        </a>
-
-
+                        <button class="btn fundo-preto text-white w-100 my-2" routerLink="/tema" data-bs-dismiss="modal" data-bs-target="#my-modal"> Todos os temas </button>
+                        
                         <button class="btn fundo-cinza-claro text-white w-100 my-2"
                             [routerLink]="['/usuario-edit', id]">Editar usuário
-
                         </button>
                     </div>
 
